@@ -16,6 +16,12 @@
 #define _RAISE 6
 #define _LOWER 7
 
+#define CLAP 0
+
+const uint32_t PROGMEM unicode_map[] = {
+  [CLAP] = 0x1F44F
+};
+
 const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 
 [_COLEMAK] = {
@@ -43,7 +49,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
   {KC_TAB  , S(KC_Q) , S(KC_W) , S(KC_F) , S(KC_P)    , S(KC_G) , S(KC_J) , S(KC_L)    , S(KC_U) , S(KC_Y) , KC_SCLN , KC_BSPC} ,
   {KC_ESC  , S(KC_A) , S(KC_R) , S(KC_S) , S(KC_T)    , S(KC_D) , S(KC_H) , S(KC_N)    , S(KC_E) , S(KC_I) , S(KC_O) , KC_QUOT} ,
   {KC_LSFT , S(KC_Z) , S(KC_X) , S(KC_C) , S(KC_V)    , S(KC_B) , S(KC_K) , S(KC_M)    , KC_COMM , KC_DOT  , KC_SLSH , KC_RSFT} ,
-  {_______ , KC_LCTL , KC_LALT , KC_LGUI , MO(_LOWER) , KC_ENT  , KC_SPC  , MO(_RAISE) , KC_RGUI , KC_RALT , KC_RCTL , _______}
+  {_______ , KC_LCTL , KC_LALT , KC_LGUI , MO(_LOWER) , KC_ENT  , X(CLAP) , MO(_RAISE) , KC_RGUI , KC_RALT , KC_RCTL , _______}
 }
 
 };
